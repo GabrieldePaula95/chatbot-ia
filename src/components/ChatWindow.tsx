@@ -43,7 +43,6 @@ export default function ChatWindow() {
     }
   }
 
-  // ✅ Função de exportação
   const exportMessagesAsJSON = () => {
     const blob = new Blob([JSON.stringify(messages, null, 2)], {
       type: 'application/json'
@@ -71,7 +70,6 @@ export default function ChatWindow() {
       <div className="flex flex-col gap-2 pt-2">
         <MessageInput onSend={handleSend} />
 
-        {/* ✅ Botão de exportar JSON */}
         <button
           onClick={exportMessagesAsJSON}
           className="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"

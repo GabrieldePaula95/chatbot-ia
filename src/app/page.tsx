@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Chat com IA - Assistente Virtual',
+  description: 'Converse com um chatbot inteligente em tempo real.',
+}
+
+
 import ChatWindow from "@/components/ChatWindow"
 
 export default function HomePage() {

@@ -10,7 +10,7 @@ export async function POST(req: Request) {
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
         'Content-Type': 'application/json',
         'HTTP-Referer': 'http://localhost:3000',
-        'X-Title': 'Chatbot IA Gabriel'
+        'X-Title': 'Chatbot IA'
       },
       body: JSON.stringify({
         model: 'openai/gpt-3.5-turbo', // você pode trocar para outros como 'mistral/mixtral-8x7b'
