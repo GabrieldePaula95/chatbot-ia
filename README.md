@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Chatbot IA - Desafio Técnico Frontend
 
-## Getting Started
+Este é um chatbot de inteligência artificial desenvolvido em Next.js + React para o desafio técnico do time de Engenharia de Dados & IA.
 
-First, run the development server:
+O objetivo é permitir que usuários interajam com um modelo de IA via interface moderna e responsiva, com histórico, loading, tratamento de erros, exportação da conversa e deploy em produção.
 
-```bash
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js 13+ (App Router)](https://nextjs.org)
+- [React.js](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com)
+- [Shadcn UI](https://ui.shadcn.com)
+- API: [OpenRouter (proxy gratuito de IA compatível com OpenAI)](https://openrouter.ai)
+
+---
+
+## 🧠 Como Funciona
+
+- O usuário envia uma pergunta via input.
+- O frontend envia o histórico para a rota `/api/chat`.
+- A rota faz uma chamada à API do OpenRouter (modelo GPT-3.5).
+- A resposta é exibida em tempo real na tela.
+- A conversa pode ser exportada em `.json`.
+
+---
+
+## 🔐 Como Obter a Chave da OpenRouter
+
+1. Acesse: [https://openrouter.ai](https://openrouter.ai)
+2. Crie uma conta e vá em: [https://openrouter.ai/keys](https://openrouter.ai/keys)
+3. Gere uma chave (token)
+4. No ambiente local, crie o arquivo `.env.local` e adicione:
+
+```env
+OPENROUTER_API_KEY=sua-chave-aqui
+
+
+# Clone o repositório
+git clone https://github.com/GabrieldePaula95/chatbot-ia.git
+cd chatbot-ia
+
+# Instale as dependências
+npm install
+
+# Crie o arquivo .env.local com sua chave OpenRouter
+touch .env.local
+# e adicione: OPENROUTER_API_KEY=sua-chave
+
+# Rode o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📦 Funcionalidades
+✅ Chat com IA integrada (GPT-3.5 via OpenRouter)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ Interface moderna com Tailwind + Shadcn UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Loading de resposta
 
-## Learn More
+✅ Tratamento de erros da API
 
-To learn more about Next.js, take a look at the following resources:
+✅ Histórico de mensagens
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ Exportar conversa em .json
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ Deploy em produção via Vercel
 
-## Deploy on Vercel
+🌐 Deploy (Vercel)
+Acesse a versão em produção aqui:
+👉 https://chatbot-ia-five.vercel.app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+👨‍💻 Autor
+Gabriel de Paula
+github.com/GabrieldePaula95
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
