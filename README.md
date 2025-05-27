@@ -65,11 +65,17 @@ npm run dev
 
 📦 Funcionalidades
 ✅ Chat com IA integrada (GPT-3.5 via OpenRouter)
+
 ✅ Interface moderna com Tailwind + Shadcn UI
+
 ✅ Loading de resposta
+
 ✅ Tratamento de erros da API
+
 ✅ Histórico de mensagens
+
 ✅ Exportar conversa em .json
+
 ✅ Deploy em produção via Vercel
 
 🌐 Deploy (Vercel)
