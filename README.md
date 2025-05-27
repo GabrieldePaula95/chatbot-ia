@@ -45,11 +45,9 @@ O objetivo é permitir que usuários interajam com um modelo de IA via interface
 1. Acesse: [https://openrouter.ai](https://openrouter.ai)
 2. Faça login e vá em [https://openrouter.ai/keys](https://openrouter.ai/keys)
 3. Clique em “Create key”
-4. No ambiente local, crie o arquivo `.env.local` e adicione:
+4. No ambiente local, crie o arquivo `.env.local` e adicione: OPENROUTER_API_KEY=sua-chave-aqui
 
-```env
-OPENROUTER_API_KEY=sua-chave-aqui
-
+```
 # Clone o repositório
 git clone https://github.com/GabrieldePaula95/chatbot-ia.git
 cd chatbot-ia
@@ -63,20 +61,15 @@ touch .env.local
 
 # Rode o projeto
 npm run dev
+```
 
 📦 Funcionalidades
 ✅ Chat com IA integrada (GPT-3.5 via OpenRouter)
-
 ✅ Interface moderna com Tailwind + Shadcn UI
-
 ✅ Loading de resposta
-
 ✅ Tratamento de erros da API
-
 ✅ Histórico de mensagens
-
 ✅ Exportar conversa em .json
-
 ✅ Deploy em produção via Vercel
 
 🌐 Deploy (Vercel)
