@@ -6,6 +6,19 @@ O objetivo é permitir que usuários interajam com um modelo de IA via interface
 
 ---
 
+## ⚙️ Explicação rápida das decisões técnicas
+
+- Utilização do **App Router** do Next.js 13+ para uma arquitetura moderna e escalável.
+- Criação de componentes reutilizáveis (input, mensagens, chat) e organização modular (`components/chat`, `lib`, `types`).
+- Uso da **API do OpenRouter**, compatível com OpenAI, sem custo de uso para testes.
+- Proteção da chave de API via **backend interno** (`/api/chat`), evitando exposição no client.
+- Tipagem com TypeScript e uso de tipos globais para clareza.
+- Interface construída com **Shadcn UI + Tailwind**, garantindo responsividade e boa UX.
+- Exportação da conversa como `.json`, via botão.
+- Código limpo, com controle de loading e tratamento de erros visível para o usuário.
+
+---
+
 ## 🚀 Tecnologias Utilizadas
 
 - [Next.js 13+ (App Router)](https://nextjs.org)
@@ -13,30 +26,29 @@ O objetivo é permitir que usuários interajam com um modelo de IA via interface
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com)
 - [Shadcn UI](https://ui.shadcn.com)
-- API: [OpenRouter (proxy gratuito de IA compatível com OpenAI)](https://openrouter.ai)
+- API: [OpenRouter](https://openrouter.ai)
 
 ---
 
 ## 🧠 Como Funciona
 
-- O usuário envia uma pergunta via input.
-- O frontend envia o histórico para a rota `/api/chat`.
-- A rota faz uma chamada à API do OpenRouter (modelo GPT-3.5).
-- A resposta é exibida em tempo real na tela.
-- A conversa pode ser exportada em `.json`.
+- O usuário digita uma pergunta no campo de input.
+- A mensagem é enviada para o backend (`/api/chat`) com o histórico.
+- A API do OpenRouter (GPT-3.5) responde com a resposta da IA.
+- A mensagem é exibida no chat.
+- O histórico pode ser exportado em `.json`.
 
 ---
 
 ## 🔐 Como Obter a Chave da OpenRouter
 
 1. Acesse: [https://openrouter.ai](https://openrouter.ai)
-2. Crie uma conta e vá em: [https://openrouter.ai/keys](https://openrouter.ai/keys)
-3. Gere uma chave (token)
+2. Faça login e vá em [https://openrouter.ai/keys](https://openrouter.ai/keys)
+3. Clique em “Create key”
 4. No ambiente local, crie o arquivo `.env.local` e adicione:
 
 ```env
 OPENROUTER_API_KEY=sua-chave-aqui
-
 
 # Clone o repositório
 git clone https://github.com/GabrieldePaula95/chatbot-ia.git
